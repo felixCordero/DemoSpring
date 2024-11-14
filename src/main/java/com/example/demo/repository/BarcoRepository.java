@@ -4,9 +4,10 @@ import com.example.demo.model.Barco;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface BarcoRepository extends JpaRepository<Barco, Long> {
     List<Barco> findByNombre(String nombre);
     List<Barco> findByEsloraGreaterThan(Integer eslora);
