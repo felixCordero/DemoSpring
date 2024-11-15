@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AmarreRepository extends JpaRepository {
-    List<Amarre> findByNombre(String nombre);
+public interface AmarreRepository extends JpaRepository <Amarre, Long> {
+    //List<Amarre> findByID(Long id);
 }
